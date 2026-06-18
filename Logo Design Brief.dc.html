@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #15120d; }
+  * { box-sizing: border-box; }
+  .doc { max-width: 800px; margin: 0 auto; padding: clamp(28px,5vw,60px) clamp(20px,5vw,56px) 130px; color: #d8d0bf; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 14.5px; line-height: 1.62; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
+  p, li { text-wrap: pretty; }
+  .fi { width: 100%; background: rgba(241,236,225,0.045); border: 1px solid rgba(241,236,225,0.18); border-radius: 4px; color: #f1ece1; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; line-height: 1.5; padding: 11px 13px; outline: none; transition: border-color .15s, background .15s; }
+  .fi:focus { border-color: #cdb98f; background: rgba(241,236,225,0.07); }
+  .fi::placeholder { color: rgba(241,236,225,0.30); }
+  textarea.fi { min-height: 86px; resize: vertical; display: block; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .typegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8px; }
+  .head-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+  .chk { appearance: none; -webkit-appearance: none; width: 17px; height: 17px; flex: none; cursor: pointer; margin: 0; border: 1.5px solid rgba(241,236,225,0.42); border-radius: 3px; background: transparent; position: relative; transition: all .14s; }
+  .chk:checked { background: #cdb98f; border-color: #cdb98f; }
+  .chk:checked::after { content: ""; position: absolute; left: 5px; top: 1.5px; width: 4px; height: 9px; border: solid #1a160f; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  .chip { font-size: 12.5px; color: #cfc6b3; border: 1px solid rgba(241,236,225,0.22); border-radius: 100px; padding: 7px 15px; background: transparent; cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; transition: all .14s; }
+  .chip:hover { border-color: rgba(241,236,225,0.45); }
+  .chip[data-on="1"] { background: #cdb98f; border-color: #cdb98f; color: #1a160f; font-weight: 600; }
+  .btn { font-family: 'Hanken Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; padding: 13px 22px; border-radius: 4px; cursor: pointer; border: 1px solid transparent; transition: all .15s; }
+  .btn-pri { background: #cdb98f; color: #1a160f; border-color: #cdb98f; }
+  .btn-pri:hover { background: #dac99f; }
+  .btn-sec { background: transparent; color: #e9e2d4; border-color: rgba(241,236,225,0.28); }
+  .btn-sec:hover { border-color: #cdb98f; color: #f1ece1; }
+  @keyframes toastIn { from { transform: translateX(-50%) translateY(18px); } to { transform: translateX(-50%) translateY(0); } }
+  .toast { position: fixed; left: 50%; bottom: 28px; z-index: 9999; opacity: 1; transform: translateX(-50%); animation: toastIn .32s ease; pointer-events: none; }
+  @media (max-width: 680px) {
+    .grid2, .grid3, .typegrid { grid-template-columns: 1fr; }
+    .head-row { flex-direction: column; gap: 28px; }
+  }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #15120d; }
+    .doc { padding: 0.5in 0.6in; max-width: none; }
+    .screen-only { display: none !important; }
+    .fi { background: rgba(241,236,225,0.05) !important; }
+    textarea.fi[data-pdf] { overflow: hidden; }
+    section { break-inside: avoid; }
+  }
+  @page { size: letter; margin: 0.4in; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#15120d"></rect>
+    <text x="50" y="62" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="44" fill="#cdb98f">T</text>
+  </svg>
+</template>
+<main class="doc">
+
+  <div class="head-row" style="padding-bottom:24px; border-bottom:1px solid rgba(241,236,225,0.14); margin-bottom:40px;">
+    <div>
+      <img src="assets/temboh-logo.png" alt="Temboh" style="display:block; height:30px; width:auto; margin-bottom:22px;">
+      <div style="font-size:10.5px; letter-spacing:0.32em; text-transform:uppercase; color:#cdb98f; font-weight:600; margin-bottom:14px;">Creative Intake</div>
+      <h1 style="font-family:'Cormorant Garamond', serif; font-weight:400; font-size:46px; line-height:1.05; letter-spacing:-0.005em; margin:0; color:#f1ece1;">Logo Design <em style="font-style:italic; font-weight:500; color:#cdb98f;">Brief</em></h1>
+    </div>
+    <div style="font-size:11px; color:#9a917e; padding-top:6px; min-width:190px;">
+      <div style="margin-bottom:12px;">
+        <div style="margin-bottom:6px; letter-spacing:0.04em;">Prepared for</div>
+        <input class="fi" name="preparedFor" value="{{ d.preparedFor }}" onChange="{{ onField }}" placeholder="Your name / company" style="padding:8px 11px; font-size:13px;">
+      </div>
+      <div>
+        <div style="margin-bottom:6px; letter-spacing:0.04em;">Date</div>
+        <input class="fi" type="date" name="date" value="{{ d.date }}" onChange="{{ onField }}" style="padding:8px 11px; font-size:13px; color-scheme:dark;">
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:15px; line-height:1.66; color:#b3aa97; max-width:62ch; margin:0 0 46px;">The more you tell us, the sharper the result. Answer what you can — there are no wrong answers. Your responses save automatically on this device as you type.</p>
+
+  <!-- 01 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">01</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">The business</h2>
+    </div>
+    <div class="grid2">
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Business name</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">Exactly as it should appear in the logo</div>
+        <input class="fi" name="businessName" value="{{ d.businessName }}" onChange="{{ onField }}" placeholder="e.g. Temboh Studio">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Slogan or tagline</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">If applicable — leave blank if none</div>
+        <input class="fi" name="slogan" value="{{ d.slogan }}" onChange="{{ onField }}" placeholder="Optional">
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">02</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Meaning &amp; symbolism</h2>
+    </div>
+    <p style="font-size:13px; color:#9a917e; margin:0 0 14px; max-width:60ch;">Does the name carry a special meaning? Are there cultural, symbolic, or personal elements you'd like the mark to reflect or deliberately avoid?</p>
+    <textarea class="fi" name="meaning" value="{{ d.meaning }}" onChange="{{ onField }}" placeholder="Share any meaning, symbols, or associations…"></textarea>
+  </section>
+
+  <!-- 03 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">03</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Mission, vision &amp; values</h2>
+    </div>
+    <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:60ch;">What does the company do, where is it headed, and what does it stand for?</p>
+    <div class="grid3">
+      <div>
+        <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#cdb98f; font-weight:600; margin-bottom:8px;">Mission</div>
+        <textarea class="fi" name="mission" value="{{ d.mission }}" onChange="{{ onField }}" placeholder="What we do, today" style="min-height:104px;"></textarea>
+      </div>
+      <div>
+        <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#cdb98f; font-weight:600; margin-bottom:8px;">Vision</div>
+        <textarea class="fi" name="vision" value="{{ d.vision }}" onChange="{{ onField }}" placeholder="Where we're going" style="min-height:104px;"></textarea>
+      </div>
+      <div>
+        <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#cdb98f; font-weight:600; margin-bottom:8px;">Values</div>
+        <textarea class="fi" name="values" value="{{ d.values }}" onChange="{{ onField }}" placeholder="What we believe" style="min-height:104px;"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:8px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">04</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Preferred logo type</h2>
+    </div>
+    <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:62ch;">There are seven principal types of logo. The examples show each style — tick any that appeal to you, or leave it to us to recommend the strongest fit.</p>
+    <div class="typegrid">
+      <sc-for list="{{ logoTypes }}" as="t" hint-placeholder-count="7">
+        <div style="display:flex; gap:13px; align-items:center; padding:14px 14px 14px 0; border-top:1px solid rgba(241,236,225,0.11);">
+          <input type="checkbox" class="chk" name="{{ t.name }}" checked="{{ t.on }}" onChange="{{ toggleType }}">
+          <image-slot id="{{ t.slotId }}" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:74px; height:74px; flex:none; background:#efe9dd;"></image-slot>
+          <div>
+            <div style="font-size:13px; font-weight:600; color:#f1ece1;">{{ t.name }}</div>
+            <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">{{ t.desc }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:8px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">05</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Style &amp; personality</h2>
+    </div>
+    <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:62ch;">Tap the words that feel right. The goal is a sense of tone, not a final palette.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:9px;">
+      <sc-for list="{{ styleChips }}" as="c" hint-placeholder-count="14">
+        <button type="button" class="chip" data-val="{{ c.name }}" data-on="{{ c.onAttr }}" onClick="{{ toggleStyle }}">{{ c.name }}</button>
+      </sc-for>
+    </div>
+    <div style="margin-top:18px;">
+      <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:8px;">In your own words</label>
+      <input class="fi" name="styleNotes" value="{{ d.styleNotes }}" onChange="{{ onField }}" placeholder="Anything else about the feel you're after">
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">06</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Visual direction</h2>
+    </div>
+    <div class="grid2">
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Colors you're drawn to</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">Existing brand colors, or feelings</div>
+        <input class="fi" name="colorsDrawn" value="{{ d.colorsDrawn }}" onChange="{{ onField }}" placeholder="e.g. warm neutrals, deep green">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Colors to avoid</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">Anything off-limits</div>
+        <input class="fi" name="colorsAvoid" value="{{ d.colorsAvoid }}" onChange="{{ onField }}" placeholder="Optional">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Brands you admire</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">In any industry, and why</div>
+        <input class="fi" name="brandsAdmire" value="{{ d.brandsAdmire }}" onChange="{{ onField }}" placeholder="e.g. Aesop, Linear">
+      </div>
+      <div>
+        <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Competitors to differ from</label>
+        <div style="font-size:12px; color:#8b8270; margin-bottom:10px;">Who we should not look like</div>
+        <input class="fi" name="competitors" value="{{ d.competitors }}" onChange="{{ onField }}" placeholder="Optional">
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">07</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Audience &amp; usage</h2>
+    </div>
+    <div style="margin-bottom:22px;">
+      <label style="display:block; font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:10px;">Who is this brand speaking to?</label>
+      <input class="fi" name="audience" value="{{ d.audience }}" onChange="{{ onField }}" placeholder="Describe your core audience">
+    </div>
+    <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:12px;">Where will the logo appear most? <span style="font-weight:400; color:#8b8270;">— tick all that apply</span></div>
+    <div style="display:flex; flex-wrap:wrap; gap:11px 22px;">
+      <sc-for list="{{ usageList }}" as="u" hint-placeholder-count="8">
+        <label style="display:inline-flex; align-items:center; gap:9px; font-size:12.5px; color:#cfc6b3; cursor:pointer;">
+          <input type="checkbox" class="chk" name="{{ u.name }}" checked="{{ u.on }}" onChange="{{ toggleUsage }}">{{ u.name }}
+        </label>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section style="margin-bottom:42px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">08</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Deliverables</h2>
+    </div>
+    <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:12px;">File formats needed</div>
+    <div style="display:flex; flex-wrap:wrap; gap:11px 22px;">
+      <sc-for list="{{ formatList }}" as="f" hint-placeholder-count="6">
+        <label style="display:inline-flex; align-items:center; gap:9px; font-size:12.5px; color:#cfc6b3; cursor:pointer;">
+          <input type="checkbox" class="chk" name="{{ f.name }}" checked="{{ f.on }}" onChange="{{ toggleFormat }}">{{ f.name }}
+        </label>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 09 -->
+  <section style="margin-bottom:8px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:14px; color:#cdb98f; font-weight:500;">09</span>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Anything else</h2>
+    </div>
+    <p style="font-size:13px; color:#9a917e; margin:0 0 14px; max-width:60ch;">Crucial details, must-haves, hard nos, references, or context we'd be glad to know.</p>
+    <textarea class="fi" name="extra" value="{{ d.extra }}" onChange="{{ onField }}" placeholder="Anything we should know…" style="min-height:104px;"></textarea>
+  </section>
+
+  <!-- submit -->
+  <div class="screen-only" style="margin-top:52px; padding-top:30px; border-top:1px solid rgba(241,236,225,0.14);">
+    <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+      <button type="button" class="btn btn-pri" onClick="{{ download }}">Download PDF</button>
+      <button type="button" class="btn btn-sec" onClick="{{ email }}">Email to studio</button>
+      <button type="button" class="btn btn-sec" onClick="{{ copy }}">Copy summary</button>
+    </div>
+    <div style="font-size:12px; color:#8b8270; margin-top:16px;">{{ status }}</div>
+  </div>
+
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div class="toast screen-only" aria-live="polite" style="display:flex; align-items:center; gap:11px; background:#1f1a12; border:1px solid #cdb98f; border-radius:9px; padding:13px 20px 13px 15px; box-shadow:0 14px 44px rgba(0,0,0,0.55); color:#f1ece1; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; line-height:1.4; max-width:min(420px, calc(100vw - 32px));">
+      <span style="flex:none; width:22px; height:22px; border-radius:50%; background:#cdb98f; display:flex; align-items:center; justify-content:center;">
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5 L5.5 10.5 L11.5 3.5" stroke="#1a160f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+      <span>{{ toastMsg }}</span>
+    </div>
+  </sc-if>
+
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  KEY = 'temboh-logo-brief-v1';
+  state = { data: this.load(), status: 'Your answers save automatically on this device.', toastOn: false, toastMsg: '' };
+
+  showToast(msg) {
+    if (this._toastTimer) clearTimeout(this._toastTimer);
+    this.setState({ toastMsg: msg, toastOn: true });
+    this._toastTimer = setTimeout(() => this.setState({ toastOn: false }), 3600);
+  }
+
+  defaults() {
+    return {
+      businessName: '', slogan: '', meaning: '', mission: '', vision: '', values: '',
+      styleNotes: '', colorsDrawn: '', colorsAvoid: '', brandsAdmire: '', competitors: '',
+      audience: '', extra: '', preparedFor: '', date: '',
+      types: [], styles: [], usage: [], formats: []
+    };
+  }
+  load() {
+    try { return Object.assign(this.defaults(), JSON.parse(localStorage.getItem(this.KEY) || '{}')); }
+    catch (e) { return this.defaults(); }
+  }
+  save() {
+    try { localStorage.setItem(this.KEY, JSON.stringify(this.state.data)); } catch (e) {}
+  }
+  setField(name, value) {
+    this.setState(s => ({ data: Object.assign({}, s.data, { [name]: value }) }), () => this.save());
+  }
+  toggleArr(key, val) {
+    this.setState(s => {
+      const arr = s.data[key] || [];
+      const next = arr.includes(val) ? arr.filter(x => x !== val) : arr.concat(val);
+      return { data: Object.assign({}, s.data, { [key]: next }) };
+    }, () => this.save());
+  }
+
+  summary() {
+    const d = this.state.data;
+    const L = (k, v) => (v && v.length ? k + ': ' + v : null);
+    const lines = [
+      'LOGO DESIGN BRIEF — Temboh',
+      L('Prepared for', d.preparedFor), L('Date', d.date), '',
+      '01 THE BUSINESS',
+      L('Business name', d.businessName), L('Slogan / tagline', d.slogan), '',
+      '02 MEANING & SYMBOLISM', d.meaning, '',
+      '03 MISSION, VISION & VALUES',
+      L('Mission', d.mission), L('Vision', d.vision), L('Values', d.values), '',
+      '04 PREFERRED LOGO TYPE', d.types.join(', '), '',
+      '05 STYLE & PERSONALITY',
+      d.styles.join(', '), L('Notes', d.styleNotes), '',
+      '06 VISUAL DIRECTION',
+      L('Colors drawn to', d.colorsDrawn), L('Colors to avoid', d.colorsAvoid),
+      L('Brands admired', d.brandsAdmire), L('Competitors to differ from', d.competitors), '',
+      '07 AUDIENCE & USAGE',
+      L('Audience', d.audience), L('Usage', d.usage.join(', ')), '',
+      '08 DELIVERABLES', L('Formats', d.formats.join(', ')), '',
+      '09 ANYTHING ELSE', d.extra
+    ];
+    return lines.filter(l => l !== null && l !== undefined).join('\n');
+  }
+
+  renderVals() {
+    const d = this.state.data;
+    const types = [
+      { name: 'Wordmark', desc: 'The full company name as distinctive type — Google, Coca-Cola.', slotId: 'ex-wordmark' },
+      { name: 'Lettermark', desc: 'Initials or a monogram — IBM, HBO, NASA.', slotId: 'ex-lettermark' },
+      { name: 'Pictorial mark', desc: 'A recognizable icon or object — the Apple, the Twitter bird.', slotId: 'ex-pictorial' },
+      { name: 'Abstract mark', desc: 'A geometric form with no literal meaning — Pepsi, Adidas.', slotId: 'ex-abstract' },
+      { name: 'Mascot', desc: 'An illustrated character that personifies the brand.', slotId: 'ex-mascot' },
+      { name: 'Combination mark', desc: 'Symbol and text paired together — Burger King, Lacoste.', slotId: 'ex-combination' },
+      { name: 'Emblem', desc: 'Text enclosed within a badge, crest, or seal.', slotId: 'ex-emblem' }
+    ].map(t => Object.assign({}, t, { on: d.types.includes(t.name) }));
+
+    const styleWords = ['Clean', 'Modern', 'Minimal', 'Premium', 'Bold', 'Elegant', 'Playful', 'Geometric', 'Organic', 'Nature-inspired', 'Timeless', 'Technical', 'Handcrafted', 'Luxurious'];
+    const styleChips = styleWords.map(w => ({ name: w, onAttr: d.styles.includes(w) ? '1' : '0' }));
+
+    const usage = ['Website', 'Mobile app', 'Business cards', 'Signage', 'Packaging', 'Social media', 'Merchandise', 'Email & docs'];
+    const formats = ['Vector (SVG / AI)', 'PNG (transparent)', 'PDF', 'Favicon', 'Black & white', 'Social avatars'];
+
+    return {
+      d,
+      status: this.state.status,
+      toastMsg: this.state.toastMsg,
+      toastOn: this.state.toastOn,
+      logoTypes: types,
+      styleChips,
+      usageList: usage.map(u => ({ name: u, on: d.usage.includes(u) })),
+      formatList: formats.map(f => ({ name: f, on: d.formats.includes(f) })),
+      onField: (e) => this.setField(e.target.name, e.target.value),
+      toggleType: (e) => this.toggleArr('types', e.target.name),
+      toggleUsage: (e) => this.toggleArr('usage', e.target.name),
+      toggleFormat: (e) => this.toggleArr('formats', e.target.name),
+      toggleStyle: (e) => this.toggleArr('styles', e.currentTarget.getAttribute('data-val')),
+      download: () => {
+        const tas = Array.from(document.querySelectorAll('textarea.fi'));
+        const prev = tas.map(t => t.style.height);
+        tas.forEach(t => { t.style.height = 'auto'; t.style.height = t.scrollHeight + 'px'; t.setAttribute('data-pdf', '1'); });
+        const restore = () => {
+          tas.forEach((t, i) => { t.style.height = prev[i]; t.removeAttribute('data-pdf'); });
+          window.removeEventListener('afterprint', restore);
+        };
+        window.addEventListener('afterprint', restore);
+        setTimeout(() => { window.print(); }, 80);
+        setTimeout(restore, 2000);
+      },
+      email: () => {
+        const subj = 'Logo Design Brief' + (this.state.data.businessName ? ' — ' + this.state.data.businessName : '');
+        const href = 'mailto:tmbhstudio@gmail.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(this.summary());
+        const a = document.createElement('a');
+        a.href = href; a.target = '_blank'; a.rel = 'noopener';
+        document.body.appendChild(a); a.click(); a.remove();
+        this.showToast('Sent to Temboh — press send in your email app to finish. Thank you!');
+      },
+      copy: () => {
+        const text = this.summary();
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); ta.remove();
+        } catch (e) {}
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).catch(() => {});
+        }
+        this.showToast('Summary copied to your clipboard.');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

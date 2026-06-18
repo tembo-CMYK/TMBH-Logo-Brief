@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #0a0806; }
+  * { box-sizing: border-box; }
+  .lbl { font-family: 'Hanken Grotesk', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb98f; font-weight: 600; margin-bottom: 16px; }
+  .lbl b { color: #8b8270; font-weight: 600; }
+  .card { background: #15110b; border: 1px solid rgba(241,236,225,0.10); border-radius: 5px; box-shadow: 0 24px 70px rgba(0,0,0,0.55); color: #d8d0bf; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+  .eyebrow { font-family: 'Hanken Grotesk', sans-serif; font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; color: #cdb98f; font-weight: 600; }
+  .ttl { font-family: 'Cormorant Garamond', serif; color: #f1ece1; letter-spacing: -0.01em; }
+  .tname { font-family: 'Cormorant Garamond', serif; color: #f1ece1; }
+  .focus { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #9a917e; font-weight: 600; white-space: nowrap; }
+  .price { font-family: 'Cormorant Garamond', serif; color: #cdb98f; font-weight: 500; line-height: 1; }
+  .cur { font-size: 0.5em; color: #9a917e; vertical-align: middle; margin-right: 2px; }
+  .deli { font-size: 12.5px; color: #b3aa97; line-height: 1.6; }
+  .badge { font-family: 'Hanken Grotesk', sans-serif; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #1a160f; background: #cdb98f; border-radius: 100px; padding: 4px 11px; white-space: nowrap; }
+  .cta { font-size: 12.5px; color: #9a917e; }
+  .cta b { color: #e9e2d4; font-weight: 600; }
+</style>
+</helmet>
+
+<div style="min-width:100%; min-height:100vh; width:max-content; padding:52px; background:#0a0806;">
+  <div style="display:flex; gap:60px; align-items:flex-start;">
+
+    <!-- ============ OPTION 1 — Comparison columns ============ -->
+    <div style="flex:none; width:900px;">
+      <div class="lbl">Option 1 &nbsp;<b>Comparison columns</b></div>
+      <div class="card" style="padding:44px 44px 36px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:26px; border-bottom:1px solid rgba(241,236,225,0.12); margin-bottom:34px;">
+          <div>
+            <img src="assets/temboh-logo.png" alt="Temboh" style="height:52px; display:block; margin-bottom:16px;">
+            <div class="eyebrow">Logo &amp; Identity Design</div>
+          </div>
+          <div style="text-align:right;"><div class="ttl" style="font-size:34px; font-weight:400;">Rate Card</div><div style="font-size:12px; color:#8b8270; letter-spacing:0.1em;">2026</div></div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0;">
+          <!-- Essential -->
+          <div style="padding:4px 18px 0 0;">
+            <div class="tname" style="font-size:23px;">The Essential</div>
+            <div class="focus" style="margin:4px 0 18px;">Logo Only</div>
+            <div class="price" style="font-size:38px; margin-bottom:20px;"><span class="cur">K</span>2,500</div>
+            <div class="deli">Primary logo design<br>Black, white &amp; colour variations<br>Vector &amp; digital file formats</div>
+          </div>
+          <!-- Foundation -->
+          <div style="padding:4px 18px 0; border-left:1px solid rgba(241,236,225,0.10);">
+            <div class="tname" style="font-size:23px;">The Foundation</div>
+            <div class="focus" style="margin:4px 0 18px;">Brand Elements</div>
+            <div class="price" style="font-size:38px; margin-bottom:20px;"><span class="cur">K</span>4,500</div>
+            <div class="deli" style="color:#cdb98f; margin-bottom:8px;">Everything in Essential, plus</div>
+            <div class="deli">Secondary mark<br>Defined colour palette<br>Primary typography selection</div>
+          </div>
+          <!-- Identity (featured) -->
+          <div style="padding:4px 18px 0; border-left:1px solid rgba(241,236,225,0.10); position:relative;">
+            <div style="position:absolute; top:-30px; right:0;"><span class="badge">Most chosen</span></div>
+            <div class="tname" style="font-size:23px; color:#cdb98f;">The Identity</div>
+            <div class="focus" style="margin:4px 0 18px;">Full System</div>
+            <div class="price" style="font-size:38px; margin-bottom:20px;"><span class="cur">K</span>7,500</div>
+            <div class="deli" style="color:#cdb98f; margin-bottom:8px;">Everything in Foundation, plus</div>
+            <div class="deli">Logo suite — stacked &amp; horizontal<br>Usage guidelines (PDF)<br>Social media assets</div>
+          </div>
+          <!-- Ecosystem -->
+          <div style="padding:4px 0 0 18px; border-left:1px solid rgba(241,236,225,0.10);">
+            <div class="tname" style="font-size:23px;">The Ecosystem</div>
+            <div class="focus" style="margin:4px 0 18px;">Comprehensive</div>
+            <div class="price" style="font-size:38px; margin-bottom:20px;"><span class="cur">K</span>12,000</div>
+            <div class="deli" style="color:#cdb98f; margin-bottom:8px;">Everything in Identity, plus</div>
+            <div class="deli">Full brand book<br>Business collateral<br>Custom assets &amp; mockups</div>
+          </div>
+        </div>
+
+        <div style="margin-top:36px; padding-top:22px; border-top:1px solid rgba(241,236,225,0.12); text-align:center;">
+          <span class="cta">Ready to begin? &nbsp;Call or WhatsApp <b>0973 087 778</b> &nbsp;·&nbsp; <b>tmbhstudio@gmail.com</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 2 — Stacked rows ============ -->
+    <div style="flex:none; width:660px;">
+      <div class="lbl">Option 2 &nbsp;<b>Stacked rows</b></div>
+      <div class="card" style="padding:46px 46px 38px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:34px;">
+          <img src="assets/temboh-logo.png" alt="Temboh" style="height:56px; display:block;">
+          <div style="text-align:right;"><div class="eyebrow" style="margin-bottom:5px;">Logo &amp; Identity</div><div class="ttl" style="font-size:26px; font-weight:400;">Rate Card 2026</div></div>
+        </div>
+
+        <!-- row -->
+        <div style="display:flex; gap:24px; align-items:flex-start; padding:22px 0; border-top:1px solid rgba(241,236,225,0.12);">
+          <div style="flex:1;">
+            <div style="display:flex; align-items:baseline; gap:12px;"><span class="tname" style="font-size:24px;">The Essential</span><span class="focus">Logo Only</span></div>
+            <div class="deli" style="margin-top:8px;">Primary logo design · Black, white &amp; colour variations · Vector &amp; digital file formats</div>
+          </div>
+          <div class="price" style="font-size:32px; flex:none; padding-top:2px;"><span class="cur">K</span>2,500</div>
+        </div>
+        <!-- row -->
+        <div style="display:flex; gap:24px; align-items:flex-start; padding:22px 0; border-top:1px solid rgba(241,236,225,0.12);">
+          <div style="flex:1;">
+            <div style="display:flex; align-items:baseline; gap:12px;"><span class="tname" style="font-size:24px;">The Foundation</span><span class="focus">Brand Elements</span></div>
+            <div class="deli" style="margin-top:8px;"><span style="color:#cdb98f;">Everything in Essential, plus</span> secondary mark · defined colour palette · primary typography selection</div>
+          </div>
+          <div class="price" style="font-size:32px; flex:none; padding-top:2px;"><span class="cur">K</span>4,500</div>
+        </div>
+        <!-- row featured -->
+        <div style="display:flex; gap:24px; align-items:flex-start; padding:22px 22px 22px 18px; border-top:1px solid rgba(241,236,225,0.12); border-left:2px solid #cdb98f; background:rgba(205,185,143,0.05); margin:0 -18px;">
+          <div style="flex:1;">
+            <div style="display:flex; align-items:baseline; gap:12px;"><span class="tname" style="font-size:24px; color:#cdb98f;">The Identity</span><span class="focus">Full System</span><span class="badge">Most chosen</span></div>
+            <div class="deli" style="margin-top:8px;"><span style="color:#cdb98f;">Everything in Foundation, plus</span> logo suite (stacked &amp; horizontal) · usage guidelines (PDF) · social media assets</div>
+          </div>
+          <div class="price" style="font-size:32px; flex:none; padding-top:2px;"><span class="cur">K</span>7,500</div>
+        </div>
+        <!-- row -->
+        <div style="display:flex; gap:24px; align-items:flex-start; padding:22px 0; border-top:1px solid rgba(241,236,225,0.12); border-bottom:1px solid rgba(241,236,225,0.12);">
+          <div style="flex:1;">
+            <div style="display:flex; align-items:baseline; gap:12px;"><span class="tname" style="font-size:24px;">The Ecosystem</span><span class="focus">Comprehensive</span></div>
+            <div class="deli" style="margin-top:8px;"><span style="color:#cdb98f;">Everything in Identity, plus</span> full brand book · business collateral · custom assets &amp; mockups</div>
+          </div>
+          <div class="price" style="font-size:32px; flex:none; padding-top:2px;"><span class="cur">K</span>12,000</div>
+        </div>
+
+        <div style="margin-top:26px; text-align:center;"><span class="cta">Call or WhatsApp <b>0973 087 778</b> &nbsp;·&nbsp; <b>tmbhstudio@gmail.com</b></span></div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 3 — Featured grid ============ -->
+    <div style="flex:none; width:720px;">
+      <div class="lbl">Option 3 &nbsp;<b>Featured grid</b></div>
+      <div class="card" style="padding:46px 46px 40px;">
+        <div style="text-align:center; padding-bottom:30px; border-bottom:1px solid rgba(241,236,225,0.12); margin-bottom:32px;">
+          <img src="assets/temboh-logo.png" alt="Temboh" style="height:56px; display:block; margin:0 auto 16px;">
+          <div class="ttl" style="font-size:30px; font-weight:400;">Logo &amp; Identity Rate Card</div>
+          <div class="eyebrow" style="margin-top:8px;">2026</div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <!-- Essential -->
+          <div style="border:1px solid rgba(241,236,225,0.12); border-radius:4px; padding:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><span class="tname" style="font-size:22px;">The Essential</span><span class="price" style="font-size:26px;"><span class="cur">K</span>2,500</span></div>
+            <div class="focus" style="margin:5px 0 16px;">Logo Only</div>
+            <div class="deli">Primary logo design<br>Black, white &amp; colour variations<br>Vector &amp; digital file formats</div>
+          </div>
+          <!-- Foundation -->
+          <div style="border:1px solid rgba(241,236,225,0.12); border-radius:4px; padding:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><span class="tname" style="font-size:22px;">The Foundation</span><span class="price" style="font-size:26px;"><span class="cur">K</span>4,500</span></div>
+            <div class="focus" style="margin:5px 0 16px;">Brand Elements</div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Essential, plus</span><br>Secondary mark<br>Defined colour palette<br>Primary typography</div>
+          </div>
+          <!-- Identity featured -->
+          <div style="border:1.5px solid #cdb98f; border-radius:4px; padding:24px; background:rgba(205,185,143,0.06); position:relative;">
+            <div style="position:absolute; top:-10px; left:24px;"><span class="badge">Most chosen</span></div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><span class="tname" style="font-size:22px; color:#cdb98f;">The Identity</span><span class="price" style="font-size:26px;"><span class="cur">K</span>7,500</span></div>
+            <div class="focus" style="margin:5px 0 16px;">Full System</div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Foundation, plus</span><br>Logo suite — stacked &amp; horizontal<br>Usage guidelines (PDF)<br>Social media assets</div>
+          </div>
+          <!-- Ecosystem -->
+          <div style="border:1px solid rgba(241,236,225,0.12); border-radius:4px; padding:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><span class="tname" style="font-size:22px;">The Ecosystem</span><span class="price" style="font-size:26px;"><span class="cur">K</span>12,000</span></div>
+            <div class="focus" style="margin:5px 0 16px;">Comprehensive</div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Identity, plus</span><br>Full brand book<br>Business collateral<br>Custom assets &amp; mockups</div>
+          </div>
+        </div>
+
+        <div style="margin-top:30px; text-align:center;"><span class="cta">Ready to begin? &nbsp;Call or WhatsApp <b>0973 087 778</b> &nbsp;·&nbsp; <b>tmbhstudio@gmail.com</b></span></div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 4 — Editorial index ============ -->
+    <div style="flex:none; width:600px;">
+      <div class="lbl">Option 4 &nbsp;<b>Editorial index</b></div>
+      <div class="card" style="padding:48px 48px 40px;">
+        <div style="margin-bottom:38px;">
+          <img src="assets/temboh-logo.png" alt="Temboh" style="height:52px; display:block; margin-bottom:18px;">
+          <div class="eyebrow">Rate Card · 2026</div>
+          <div class="ttl" style="font-size:40px; font-weight:400; line-height:1.04; margin-top:10px;">Logo &amp; <em style="font-style:italic; color:#cdb98f;">Identity</em><br>Design</div>
+        </div>
+
+        <!-- item -->
+        <div style="display:flex; gap:18px; align-items:baseline; padding:20px 0; border-top:1px solid rgba(241,236,225,0.12);">
+          <span class="ttl" style="font-size:15px; color:#9a917e; width:26px; flex:none;">01</span>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px;"><span class="tname" style="font-size:25px;">The Essential</span><span class="price" style="font-size:27px;"><span class="cur">K</span>2,500</span></div>
+            <div class="focus" style="margin:3px 0 9px;">Logo Only</div>
+            <div class="deli">Primary logo design · Black, white &amp; colour variations · Vector &amp; digital file formats</div>
+          </div>
+        </div>
+        <!-- item -->
+        <div style="display:flex; gap:18px; align-items:baseline; padding:20px 0; border-top:1px solid rgba(241,236,225,0.12);">
+          <span class="ttl" style="font-size:15px; color:#9a917e; width:26px; flex:none;">02</span>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px;"><span class="tname" style="font-size:25px;">The Foundation</span><span class="price" style="font-size:27px;"><span class="cur">K</span>4,500</span></div>
+            <div class="focus" style="margin:3px 0 9px;">Brand Elements</div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Essential, plus</span> secondary mark · defined colour palette · primary typography selection</div>
+          </div>
+        </div>
+        <!-- item featured -->
+        <div style="display:flex; gap:18px; align-items:baseline; padding:20px 18px; border-top:1px solid rgba(241,236,225,0.12); background:rgba(205,185,143,0.05); margin:0 -18px;">
+          <span class="ttl" style="font-size:15px; color:#cdb98f; width:26px; flex:none;">03</span>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px;"><span class="tname" style="font-size:25px; color:#cdb98f;">The Identity</span><span class="price" style="font-size:27px;"><span class="cur">K</span>7,500</span></div>
+            <div style="display:flex; align-items:center; gap:10px; margin:3px 0 9px;"><span class="focus">Full System</span><span class="badge">Most chosen</span></div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Foundation, plus</span> logo suite (stacked &amp; horizontal) · usage guidelines (PDF) · social media assets</div>
+          </div>
+        </div>
+        <!-- item -->
+        <div style="display:flex; gap:18px; align-items:baseline; padding:20px 0; border-top:1px solid rgba(241,236,225,0.12); border-bottom:1px solid rgba(241,236,225,0.12);">
+          <span class="ttl" style="font-size:15px; color:#9a917e; width:26px; flex:none;">04</span>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px;"><span class="tname" style="font-size:25px;">The Ecosystem</span><span class="price" style="font-size:27px;"><span class="cur">K</span>12,000</span></div>
+            <div class="focus" style="margin:3px 0 9px;">Comprehensive</div>
+            <div class="deli"><span style="color:#cdb98f;">Everything in Identity, plus</span> full brand book · business collateral · custom assets &amp; mockups</div>
+          </div>
+        </div>
+
+        <div style="margin-top:30px;"><div class="cta" style="line-height:1.7;">Ready to begin?<br><b>Call or WhatsApp 0973 087 778</b> &nbsp;·&nbsp; <b>tmbhstudio@gmail.com</b></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

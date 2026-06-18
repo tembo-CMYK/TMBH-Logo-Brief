@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #15120d; }
+  .doc { box-sizing: border-box; max-width: 8.5in; margin: 0 auto; background: inherit; padding: 56px clamp(24px, 5vw, 0.85in) 96px; color: #d8d0bf; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 14.5px; line-height: 1.62; -webkit-font-smoothing: antialiased; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .running-hdr, .running-ftr, .hdr-space, .ftr-space { display: none; }
+  h1, h2, h3 { text-wrap: balance; }
+  p, li { text-wrap: pretty; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #15120d; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.75in !important; box-shadow: none !important; border: none !important; background: #15120d !important; }
+    #dc-root, .sc-host { height: auto !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in !important; }
+    .running-hdr, .running-ftr { display: flex !important; justify-content: space-between; align-items: baseline; position: fixed !important; left: 0; right: 0; margin: 0 !important; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8270; font-family: 'Hanken Grotesk', sans-serif; }
+    .running-hdr { top: 0; padding: 0.32in 0.75in 0 !important; }
+    .running-ftr { bottom: 0; padding: 0 0.75in 0.32in !important; }
+    h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+    figure, pre, blockquote, .qblock, .typegrid, tr { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .screen-only { display: none !important; }
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<main class="doc">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px; padding-bottom:22px; border-bottom:1px solid rgba(241,236,225,0.14); margin-bottom:40px;">
+        <div>
+          <div style="font-size:10.5px; letter-spacing:0.32em; text-transform:uppercase; color:#cdb98f; font-weight:600; margin-bottom:14px;">Creative Intake</div>
+          <h1 style="font-family:'Cormorant Garamond', serif; font-weight:400; font-size:42px; line-height:1.05; letter-spacing:-0.005em; margin:0; color:#f1ece1;">Logo Design <em style="font-style:italic; font-weight:500; color:#cdb98f;">Brief</em></h1>
+        </div>
+        <div style="text-align:right; font-size:11px; line-height:1.7; color:#9a917e; padding-top:6px; white-space:nowrap;">
+          <div style="display:flex; gap:10px; justify-content:flex-end;"><span>Prepared&nbsp;for</span><span style="display:inline-block; width:120px; border-bottom:1px solid rgba(241,236,225,0.30);">&nbsp;</span></div>
+          <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:8px;"><span>Date</span><span style="display:inline-block; width:120px; border-bottom:1px solid rgba(241,236,225,0.30);">&nbsp;</span></div>
+        </div>
+      </div>
+
+      <p style="font-size:15px; line-height:1.66; color:#b3aa97; max-width:62ch; margin:0 0 44px;">The more you tell us, the sharper the result. Answer what you can — there are no wrong answers. This document captures the thinking behind your brand so the design work starts from a clear, shared understanding.</p>
+
+      <!-- 01 -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">01</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">The business</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 28px;">
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Business name</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">Exactly as it should appear in the logo</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Slogan or tagline</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">If applicable — leave blank if none</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">02</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Meaning &amp; symbolism</h2>
+        </div>
+        <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:60ch;">Does the name carry a special meaning? Are there cultural, symbolic, or personal elements you'd like the mark to reflect or deliberately avoid?</p>
+        <div style="border:1px solid rgba(241,236,225,0.14); border-radius:3px; background:#1d1812; padding:16px 18px;">
+          <div style="border-bottom:1px solid rgba(241,236,225,0.12); height:24px;"></div>
+          <div style="border-bottom:1px solid rgba(241,236,225,0.12); height:24px;"></div>
+          <div style="height:24px;"></div>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">03</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Mission, vision &amp; values</h2>
+        </div>
+        <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:60ch;">What does the company do, where is it headed, and what does it stand for? Three or four sentences are plenty.</p>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+          <div style="border:1px solid rgba(241,236,225,0.14); border-radius:3px; background:#1d1812; padding:13px 14px; min-height:118px;">
+            <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9a917e; font-weight:600; margin-bottom:10px;">Mission</div>
+            <div style="font-size:11px; color:#6f6757;">What we do, today</div>
+          </div>
+          <div style="border:1px solid rgba(241,236,225,0.14); border-radius:3px; background:#1d1812; padding:13px 14px; min-height:118px;">
+            <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9a917e; font-weight:600; margin-bottom:10px;">Vision</div>
+            <div style="font-size:11px; color:#6f6757;">Where we're going</div>
+          </div>
+          <div style="border:1px solid rgba(241,236,225,0.14); border-radius:3px; background:#1d1812; padding:13px 14px; min-height:118px;">
+            <div style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9a917e; font-weight:600; margin-bottom:10px;">Values</div>
+            <div style="font-size:11px; color:#6f6757;">What we believe</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 logo types -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:8px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">04</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Preferred logo type</h2>
+        </div>
+        <p style="font-size:13px; color:#9a917e; margin:0 0 18px; max-width:62ch;">There are seven principal types of logo. Mark any that appeal to you — or leave it to us to recommend the strongest fit.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-wordmark" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Wordmark</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">The full company name as distinctive type — Google, Coca-Cola.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-lettermark" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Lettermark</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">Initials or a monogram — IBM, HBO, NASA.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-pictorial" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Pictorial mark</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">A recognizable icon or object — the Apple, the Twitter bird.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-abstract" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Abstract mark</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">A geometric form with no literal meaning — Pepsi, Adidas.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-mascot" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Mascot</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">An illustrated character that personifies the brand.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-combination" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Combination mark</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">Symbol and text paired together — Burger King, Lacoste.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:13px; align-items:center; padding:14px 16px; border-top:1px solid rgba(241,236,225,0.11);">
+            <span style="flex:none; width:15px; height:15px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>
+            <image-slot id="ex-emblem" shape="rounded" radius="3" fit="contain" placeholder="Add example" style="width:96px; height:60px; flex:none; background:#efe9dd;"></image-slot>
+            <div>
+              <div style="font-size:13px; font-weight:600; color:#f1ece1;">Emblem</div>
+              <div style="font-size:11.5px; color:#9a917e; line-height:1.5; margin-top:2px;">Text enclosed within a badge, crest, or seal.</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 05 style -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:8px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">05</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Style &amp; personality</h2>
+        </div>
+        <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:62ch;">Circle the words that feel right, cross out the ones that don't. The goal is a sense of tone, not a final palette.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:9px;">
+          <sc-for list="{{ styleWords }}" as="w" hint-placeholder-count="14">
+            <span style="font-size:12px; color:#cfc6b3; border:1px solid rgba(241,236,225,0.22); border-radius:100px; padding:6px 14px; background:#1d1812;">{{ w }}</span>
+          </sc-for>
+        </div>
+        <div style="margin-top:18px; display:flex; align-items:baseline; gap:12px;">
+          <span style="font-size:12px; font-weight:600; color:#e9e2d4; flex:none;">In your own words</span>
+          <span style="flex:1; border-bottom:1px solid rgba(241,236,225,0.30); height:20px;"></span>
+        </div>
+      </section>
+
+      <!-- 06 direction -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">06</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Visual direction</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 28px;">
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0; margin-bottom:18px;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Colors you're drawn to</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">Existing brand colors, or feelings</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0; margin-bottom:18px;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Colors to avoid</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">Anything off-limits</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Brands you admire</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">In any industry, and why</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+          <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 0;">
+            <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Competitors to differ from</div>
+            <div style="font-size:12px; color:#8b8270; margin-bottom:14px;">Who we should not look like</div>
+            <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 audience + usage -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">07</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Audience &amp; usage</h2>
+        </div>
+        <div style="border-top:1px solid rgba(241,236,225,0.14); padding:14px 0 18px;">
+          <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:4px;">Who is this brand speaking to?</div>
+          <div style="border-bottom:1px solid rgba(241,236,225,0.30); height:22px; margin-top:12px;"></div>
+        </div>
+        <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:12px;">Where will the logo appear most? <span style="font-weight:400; color:#8b8270;">— mark all that apply</span></div>
+        <div style="display:flex; flex-wrap:wrap; gap:9px 10px;">
+          <sc-for list="{{ usageItems }}" as="u" hint-placeholder-count="8">
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#cfc6b3;">
+              <span style="width:14px; height:14px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>{{ u }}
+            </span>
+          </sc-for>
+        </div>
+      </section>
+
+      <!-- 08 logistics -->
+      <section class="qblock" style="margin-bottom:38px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">08</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Deliverables &amp; logistics</h2>
+        </div>
+        <div style="font-size:12px; font-weight:600; color:#e9e2d4; margin-bottom:12px;">File formats needed</div>
+        <div style="display:flex; flex-wrap:wrap; gap:9px 10px;">
+          <sc-for list="{{ formats }}" as="f" hint-placeholder-count="6">
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#cfc6b3;">
+              <span style="width:14px; height:14px; border:1.5px solid rgba(241,236,225,0.42); border-radius:3px;"></span>{{ f }}
+            </span>
+          </sc-for>
+        </div>
+      </section>
+
+      <!-- 09 extra -->
+      <section class="qblock" style="margin-bottom:8px;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:13px; color:#cdb98f; font-weight:500; letter-spacing:0.04em;">09</span>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; letter-spacing:-0.01em; margin:0; color:#f1ece1;">Anything else</h2>
+        </div>
+        <p style="font-size:13px; color:#9a917e; margin:0 0 16px; max-width:60ch;">Crucial details, must-haves, hard nos, references, or context we'd be glad to know.</p>
+        <div style="border:1px solid rgba(241,236,225,0.14); border-radius:3px; background:#1d1812; padding:16px 18px;">
+          <div style="border-bottom:1px solid rgba(241,236,225,0.12); height:24px;"></div>
+          <div style="border-bottom:1px solid rgba(241,236,225,0.12); height:24px;"></div>
+          <div style="border-bottom:1px solid rgba(241,236,225,0.12); height:24px;"></div>
+          <div style="height:24px;"></div>
+        </div>
+      </section>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+  <div class="running-hdr"><span>Logo Design Brief</span><span>Creative Intake</span></div>
+  <div class="running-ftr"><span>Confidential</span><span>thezig.io</span></div>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      logoTypes: [
+        { name: "Wordmark", desc: "The full company name as distinctive type — Google, Coca-Cola." },
+        { name: "Lettermark", desc: "Initials or a monogram — IBM, HBO, NASA." },
+        { name: "Pictorial mark", desc: "A recognizable icon or object — the Apple, the Twitter bird." },
+        { name: "Abstract mark", desc: "A geometric form with no literal meaning — Pepsi, Adidas." },
+        { name: "Mascot", desc: "An illustrated character that personifies the brand." },
+        { name: "Combination mark", desc: "Symbol and text paired together — Burger King, Lacoste." },
+        { name: "Emblem", desc: "Text enclosed within a badge, crest, or seal." }
+      ],
+      styleWords: ["Clean", "Modern", "Minimal", "Premium", "Bold", "Elegant", "Playful", "Geometric", "Organic", "Nature-inspired", "Timeless", "Technical", "Handcrafted", "Luxurious"],
+      usageItems: ["Website", "Mobile app", "Business cards", "Signage", "Packaging", "Social media", "Merchandise", "Email & docs"],
+      formats: ["Vector (SVG / AI)", "PNG (transparent)", "PDF", "Favicon", "Black & white", "Social avatars"]
+    };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Logo Design Brief";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  @page { margin: 0.5cm; }\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks, whose
+  // slides are sized to the page.
+  try {
+    if (!document.querySelector('deck-stage')) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a body padding inset only when we also zero the
+      // @page margin; computed style can't tell us (it reports screen media),
+      // so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /body\s*\{[^}]*padding/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
